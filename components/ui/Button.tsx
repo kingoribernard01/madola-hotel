@@ -4,8 +4,10 @@ import { cn } from "../../lib/utils";
 
 interface ButtonProps extends HTMLMotionProps<"button"> {
   variant?: 'primary' | 'secondary';
-  children: React.ReactNode;
+  children?: React.ReactNode;
   asChild?: boolean;
+  className?: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export function Button({ className, variant = 'primary', children, onClick, ...props }: ButtonProps) {
